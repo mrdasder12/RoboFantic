@@ -1,156 +1,420 @@
 <!DOCTYPE html>
-<!--Work In Progress Made By Alex Kasper-->
-<html>
- <head>
-   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-   <title>RoboFantic</title>
-   <style type="text/css">
-     html, #page { padding:0; margin:0;}
-     body { margin:0; padding:0; width:100%; color:#959595; font:normal 12px/2.0em Sans-Serif;}
-     h1, h2, h3, h4, h5, h6 {color:darkblue;}
-     #page { background:#eee;}
-     #header, #footer, #top-nav, #content, #content #contentbar, #content #sidebar { margin:0; padding:0;}
+<!--[if IE 6]>
+<html id="ie6" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" dir="ltr" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html dir="ltr" lang="en-US">
+    <!--<![endif]-->
+    <head>
 
-     /* Logo */
-     #logo { padding:10px; width:auto; float:left;}
-     #logo h1 a, h1 a:hover { color:darkblue; text-decoration:none;}
-     #logo h1 span { color:#d3d3f9;}
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
 
-     /* Header */
-     #header { background:#eee; }
-     #header-inner { margin:0 auto; padding:10px; width:970px;background:#fff;}
+        <title>Robofantic | Home</title>
 
-     /* Feature */
-     .feature { background:#eee;padding:0;}
-     .feature-inner { margin:auto;padding:10px;width:970px;background:blue; }
-     .feature-inner h1 {color:#d3d3f9;font-size:32px;}
+        <!-- [favicon] begin -->
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+        <!-- [favicon] end -->
 
-     /* Menu */
-     #top-nav { margin:0 auto; padding:0px 0 0; height:37px; float:right;}
-     #top-nav ul { list-style:none; padding:0; height:37px; float:left;}
-     #top-nav ul li { margin:0; padding:0 0 0 8px; float:left;}
-     #top-nav ul li a { display:block; margin:0; padding:8px 20px; color:blue; text-decoration:none;}
-     #top-nav ul li.active a, #top-nav ul li a:hover { color:#d3d3f9;}
+        <!-- CSS Main -->
+        <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="style.css" />
+        <link rel="stylesheet" type="text/css" media="screen and (max-width: 960px)" href="css/lessthen960.css" />
+        <link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="css/lessthen600.css" />
+        <link rel="stylesheet" type="text/css" media="screen and (max-width: 480px)" href="css/lessthen480.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="css/memento.css"  />
 
-     /* Content */
-     #content-inner { margin:0 auto; padding:10px; width:970px;background:#fff;}
-     #content #contentbar { margin:0; padding:0; float:right; width:760px;}
-     #content #contentbar .article { margin:0 0 24px; padding:0 20px 0 15px; }
-     #content #sidebar { padding:0; float:left; width:200px;}
-     #content #sidebar .widget { margin:0 0 12px; padding:8px 8px 8px 13px;line-height:1.4em;}
-     #content #sidebar .widget h3 a { text-decoration:none;}
-     #content #sidebar .widget ul { margin:0; padding:0; list-style:none; color:#959595;}
-     #content #sidebar .widget ul li { margin:0;}
-     #content #sidebar .widget ul li { padding:4px 0; width:185px;}
-     #content #sidebar .widget ul li a { color:blue; text-decoration:none; margin-left:-16px; padding:4px 8px 4px 16px;}
-     #content #sidebar .widget ul li a:hover { color:#d3d3f9; font-weight:bold; text-decoration:none;}
+        <!-- CSS Plugin -->
+        <link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/tipsy.css" type="text/css" media="all" />
+        <link rel='stylesheet' href='css/buttons.min.css' type='text/css' media='all' />
+		<link rel='stylesheet' href='css/buttons.css' type='text/css' media='all' />
+		<link rel='stylesheet' href='css/labels.min.css' type='text/css' media='all' />
+		<link rel='stylesheet' href='css/wells.min.css' type='text/css' media='all' />
 
-     /* Footerblurb */
-     #footerblurb { background:#eee;color:blue;}
-     #footerblurb-inner { margin:0 auto; width:970px; padding:10px;background:#d3d3f9;border-bottom-right-radius:15px;border-bottom-left-radius:15px;}
-     #footerblurb .column { margin:0; text-align:justify; float:left;width:250px;padding:0 24px;}
+        <!-- CSS Slider -->
+        <link rel="stylesheet" href="css/slider-thumbnails.css" type="text/css" media="all" />
 
-     /* Footer */
-     #footer { background:#eee;}
-     #footer-inner { margin:auto; text-align:center; padding:12px; width:970px;}
-     #footer a {color:blue;text-decoration:none;}
+        <link rel="stylesheet" type="text/css" media="all" href="css/homes/home-x.css" />
+        <link rel='stylesheet' href='css/layerslider.css' type='text/css' media='all' />
 
 
-     /* Clear both sides to assist with div alignment  */
-     .clr { clear:both; padding:0; margin:0; width:100%; font-size:0px; line-height:0px;}
-   </style>
-   <script type="text/javascript">
-   </script>
+        <!-- FONTS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans&amp;subset=latin%2Ccyrillic%2Cgreek&amp;ver=3.4.1" type="text/css" media="all" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Shadows+Into+Light&amp;subset=latin%2Ccyrillic%2Cgreek&amp;ver=3.4.1" type="text/css" media="all" />
+                <link rel='stylesheet' href='css/font-awesome.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='fonts/socialico/stylesheet.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed%3A300%7CPlayfair+Display%3A400italic&#038;ver=3.4.1' type='text/css' media='all' />
 
-   <!--This is the icon-->
-   <link rel="icon" type="image/vnd.microsoft.icon"
-       href="https://mrdasder12.github.io/RoboFantic/favicon.ico" />
- </head>
+        <!-- JavaScripts -->
+        <script type="text/javascript">
+            var yiw_prettyphoto_style = 'pp_default';
+        </script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.cycle.min.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+        <script type="text/javascript" src="js/jquery.tipsy.js"></script>
+        <script type="text/javascript" src="js/jquery.tweetable.js"></script>
+        <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+        <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
+        <script type="text/javascript" src="js/jquery.aw-showcase.js"></script>
+        <script type="text/javascript" src="js/superfish.js"></script>
+        <script type='text/javascript' src="js/jquery.eislideshow.js"></script>
+        <script type='text/javascript' src="js/swfobject.js"></script>
+        <script type='text/javascript' src='js/jquery.cookie.js'></script>
+        <script type='text/javascript' src='js/buttons.min.js'></script>
+        <script type='text/javascript' src='js/layerslider.kreaturamedia.jquery-min.js'></script>
+        <script type='text/javascript' src='js/jquery.quicksand.js'></script>
 
- <body>
-   <div id="page">
-     <header id="header">
-       <div id="header-inner">
-         <!--The large icon on the page-->
-         <div id="https://mrdasder12.github.io/RoboFantic/Roboticon.html">
-           <img src="https://mrdasder12.github.io/RoboFantic/robot_icon.png" alt="Blue Robo" style="width:88px;height:88px;">
-           <!--The link it goes to-->
-           <h1><a href="https://mrdasder12.github.io/RoboFantic/Roboticon.html">Blue<span>Robo</span></a></h1>
-         </div>
-         <div id="top-nav">
-           <ul>
-           <li><a href="C:\Users\Alex\Desktop\RoboFantic-master/About.html">About</a></li>
-           <li><a href="#">Contact</a></li>
-           <li><a href="#">FAQ</a></li>
-           <li><a href="#">Help</a></li>
-           </ul>
-         </div>
-         <div class="clr"></div>
-       </div>
-     </header>
-     <div class="feature">
-       <div class="feature-inner">
-       <h1>RoboFantic</h1>
-       </div>
-     </div>
-     <div id="content">
-       <div id="content-inner">
-         <main id="contentbar">
-           <div class="article">
-             <p></p>
-           </div>
-         </main>
-         <nav id="sidebar">
-           <div class="widget">
-             <!--These are the 5 links on the left side-->
-             <h3>Games</h3>
-             <ul>
-               <img src="https://mrdasder12.github.io/RoboFantic/es_icon_accelerate.png" style="width:42px;height:42px;">
-             <li><a href="https://mrdasder12.github.io/RoboFantic/Game.html">Acceleration!</a></li>
-             <li><a href="#">Link 2</a></li>
-             <li><a href="#">Link 3</a></li>
-             <li><a href="#">Link 4</a></li>
-             <li><a href="#">Link 5</a></li>
-             </ul>
-           </div>
-         </nav>
-         <div class="clr"></div>
-       </div>
-     </div>
-     <div id="footerblurb">
-       <div id="footerblurb-inner">
-         <!--List Of News-->
-         <div class="column">
-           <h2><span>News</span></h2>
-           <li><font face="	Comic Sans MS" color="green">Fixing Headings</font></li>
-           <li><font face="	Comic Sans MS" color="green">Adding Games</font></li>
-           <li><font face="	Comic Sans MS" color="green">Working on adding the other pages</font></li>
-           <li><font face="	Comic Sans MS" color="green">Taking too much time</font></li>
-         </div>
-         <!--This is the version of the website-->
-         <div class="column">
-           <h2><span>Version</span></h2>
-           <p>0.1.5</p>
-         </div>
-         <!--List Of Updates-->
-         <div class="column">
-           <h2><span>Updates</span></h2>
-           <li><font face="	Comic Sans MS" color="green">Added A Game!</font></li>
-           <li><font face="	Comic Sans MS" color="green">Added A Tab Icon!!!</font></li>
-           <li><font face="	Comic Sans MS" color="green"></font></li>
-           <li><font face="	Comic Sans MS" color="green"></font></li>
-         </div>
-         <div class="clr"></div>
-       </div>
-     </div>
-     <footer id="footer">
-       <div id="footer-inner">
-         <p>&copy; Copyright <a href="#">RoboFantic</a> &#124; <a href="C:\Users\Alex\Desktop\RoboFantic-master\Terms Of Use.html">Terms of Use</a> &#124; <a href="#">Privacy Policy</a></p>
-         <div class="clr"></div>
-       </div>
-     </footer>
-   </div>
- </body>
- <!--This Makes Right Click Unavailible-->
- <body oncontextmenu="return false">
+    </head>
+    <body class="no_js responsive boxed-layout chrome ">
+
+        <!-- TOPBAR -->
+        <div id="topbar">
+            <div class="inner group">
+
+                <div class="topbar-left">
+                    <!-- START TWITTER -->
+                    <div id="twitter-slider" class="group">
+                        <div class="tweets-list"></div>
+                        <script type="text/javascript" src="js/twitter.js" ></script>
+                    </div>
+                    <!-- END TWITTER -->
+                </div>
+
+                <div class="topbar-right">
+                    <ul class="topbar-level-1">
+                        <li>
+                            <a href="#">Top bar menu</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">And submenu</a></li>
+                                <li><a href="#"><i class="icon-home"></i>with icons</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html"><i class="icon-envelope"></i> Mail us</a></li>
+                        <li class="login_link"><i class="icon-key"></i><a href="#">Log in</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <!-- END TOPBAR -->
+
+        <!-- START WRAPPER -->
+        <div class="wrapper group">
+            <!-- START HEADER -->
+            <div id="header" class="group">
+                <div class="group inner">
+
+                    <!-- START LOGO -->
+                    <div id="logo" class="group">
+                        <h1>
+                            <a class="logo-text" href="index.html" title="Mem&eacute;nto">Rob<span>o</span>Fantic</a>
+                        </h1>
+                        <p>Home</p>
+                    </div>
+                    <!-- END LOGO -->
+
+                    <!-- START NAV -->
+                    <div id="nav" class="group">
+                        <ul id="menu-main-nav" class="level-1">
+
+                          <li>
+                              <a href="index.html"><i class="icon-home"></i>Home</a>
+
+                          <li>
+                              <a href="gallery-responsive.html"><i class="icon-film"></i>Gallery</a>
+                              <ul class="sub-menu">
+
+                              </ul>
+                          </li>
+
+                          <li>
+                              <a href="aboutme.html"><i class="icon-picture"></i> About Me</a>
+                              <ul class="sub-menu">
+
+                              </ul>
+                            </li>
+
+                            <li>
+                              <a href="#"><i class="icon-file"></i>Pages</a>
+                              <ul class="sub-menu">
+                                  <li><a href="faqs.html"><i class="icon-file   icon-question-sign"></i>Faq</a></li>
+                                  <li><a href="testimonials.html"><i class="icon-comments"></i>Testimonials</a></li>
+                                  <li><a href="contact.html"><i class="icon-edit"></i> Contact</a></li>
+                                  <li><a href="404.html"><i class="icon-remove-sign"></i>Error 404</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#"><i class="icon-calendar"></i>Blog</a>
+                                <ul class="sub-menu">
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="shortcodes-table-box-prices.html"><i class="icon-list-alt"></i>Prices</a>
+                                <ul class="sub-menu">
+                                </ul>
+                            </li>
+
+                            <li><a href="features.html"><i class="icon-star"></i>Features</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- END NAV -->
+                </div>
+            </div>
+            <!-- END HEADER -->
+
+            <!-- SLIDER -->
+			<!-- START SLIDER -->
+			<div id="slider" class="layers-slider">
+			    <div class="shadowWrapper">
+			        <div id="layerslider_1" style="margin: 0px auto; width: 1000px; height: 380px; ">
+			            <div class="ls-layer" style="background-image: url(images/slider-parallax/bg.jpg );slidedirection: right; slidedelay: 4000; durationin: 1500; durationout: 1500; easingin: easeInOutQuint; easingout: easeInOutQuint; delayin: 0; delayout: 0;">
+			            	<img class="ls-s1" src="images/slider-parallax/023.png" alt="sublayer" style="position: absolute; top: 180px; left: 60px; slidedirection : left; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 2000; durationout : 1500; easingin : easeOutBounce; easingout : easeInOutQuint; delayin : 100; delayout : 0;" />
+			            	<a href="#" target="_self" class="ls-s3" style="position: absolute; top: 330px; left:128px; slidedirection : left; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 2000; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 150; delayout : 0;"><img src="images/slider-parallax/033.png" alt="sublayer" /></a>
+			            	<img class="ls-s4" src="images/slider-parallax/robot_icon.png" alt="sublayer" style="position: absolute; top: 60px; left: 500px; slidedirection : right; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 1000; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 400; delayout : 0;" />
+			            </div>
+			            <div class="ls-layer" style="background-image: url(images/slider-parallax/bg2.jpg );slidedirection: right; slidedelay: 4000; durationin: 1500; durationout: 1500; easingin: easeInOutQuint; easingout: easeInOutQuint; delayin: 0; delayout: 0;">
+			            	<img class="ls-s2" src="images/slider-parallax/Money.png" alt="sublayer" style="position: absolute; top: 40px; left: 60px; slidedirection : left; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 2500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0;" />
+			            	<img class="ls-s3" src="images/slider-parallax/024.png" alt="sublayer" style="position: absolute; top: 100px; left: 530px; slidedirection : bottom; slideoutdirection : bottom; parallaxin : .45; parallaxout : .45; durationin : 300; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 800; delayout : 0;" />
+			            	<img class="ls-s5" src="images/slider-parallax/034.png" alt="sublayer" style="position: absolute; top: 186px; left: 650px; slidedirection : bottom; slideoutdirection : bottom; parallaxin : .45; parallaxout : .45; durationin : 300; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 850; delayout : 0;" />
+			            	<a href="testimonials.html" target="_self" class="ls-s1" style="position: absolute; top: 240px; left:530px; slidedirection : bottom; slideoutdirection : bottom; parallaxin : .45; parallaxout : .45; durationin : 300; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 900; delayout : 0;"><img src="images/slider-parallax/042.png" alt="sublayer" /></a>
+			            </div>
+			            <div class="ls-layer" style="background-image: url(images/slider-parallax/l3.jpg );slidedirection: right; slidedelay: 4000; durationin: 1500; durationout: 1500; easingin: easeInOutQuint; easingout: easeInOutQuint; delayin: 0; delayout: 0;">
+			            	<img class="ls-s1" src="images/slider-parallax/l31.png" alt="sublayer" style="position: absolute; top: 0px; left: 0px; slidedirection : right; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 5800; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0;" />
+			            	<img class="ls-s3" src="images/slider-parallax/l32.png" alt="sublayer" style="position: absolute; top: 0px; left: 0px; slidedirection : right; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 5600; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0;" />
+			            	<img class="ls-s5" src="images/slider-parallax/l33.png" alt="sublayer" style="position: absolute; top: -20px; left: -32px; slidedirection : right; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 1200; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0;" />
+			            	<img class="ls-s7" src="images/slider-parallax/l34.png" alt="sublayer" style="position: absolute; top: -53px; left: 12px; slidedirection : right; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 1350; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0;" />
+			            	<img class="ls-s9" src="images/slider-parallax/l36.png" alt="sublayer" style="position: absolute; top: -69px; left: 14px; slidedirection : right; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 4000; durationout : 800; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 50;" />
+			            	<img class="ls-s11" src="images/slider-parallax/l35.png" alt="sublayer" style="position: absolute; top: 0px; left: 0px; slidedirection : right; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 5000; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 100;" />
+			            	<img class="ls-s13" src="images/slider-parallax/l37.png" alt="sublayer" style="position: absolute; top: -114px; left: -56px; slidedirection : right; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0;" />
+			            	<img class="ls-s15" src="images/slider-parallax/l38.png" alt="sublayer" style="position: absolute; top: -124px; left: -55px; slidedirection : right; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0;" />
+			            	<img class="ls-s17" src="images/slider-parallax/l39.png" alt="sublayer" style="position: absolute; top: -132px; left: -55px; slidedirection : right; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0;" />
+			            	<img class="ls-s19" src="images/slider-parallax/l310.png" alt="sublayer" style="position: absolute; top: -110px; left: -15px; slidedirection : right; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0;" />
+			            	<img class="ls-s21" src="images/slider-parallax/l311.png" alt="sublayer" style="position: absolute; top: -113px; left: -15px; slidedirection : right; slideoutdirection : left; parallaxin : .45; parallaxout : .45; durationin : 1500; durationout : 1500; easingin : easeInOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0;" />
+			            </div>
+			        </div>
+			        <div class="shadow-left"></div>
+			        <div class="shadow-right"></div>
+			    </div>
+			</div>
+			<!-- END SLIDER -->
+			<script type="text/javascript" src="js/layer-slider.js"></script>
+			<!-- /SLIDER -->
+
+			<div id="primary" class="layout-sidebar-left home-section">
+			    <div class="inner group">
+			        <!-- START CONTENT -->
+			        <div id="content" class="group">
+			            <div class="page type-page status-publish hentry group">
+			                <h1>Welcome to <span style="color: #d46e2a;">Robofantic</span>.</h1>
+			                <p>what we do</p>
+			                <h5>A small title to improve your SEO</h5>
+			                <p>Donec pulvinar orci a dolor lobortis eu lacinia erat adipiscing. Pellentesque porttitor pretium rhoncus. Vestibulum ornare <strong>lectus eget urna elementum</strong> congue. Aenean sit amet sapien tempus erat mollis lobortis. Nulla facilisi. Sed in mi tortor, a tincidunt massa. Integer dictum purus at risus blandit mattis.</p>
+			            </div>
+			        </div>
+			        <!-- END CONTENT -->
+			        <!-- START LATEST NEWS -->
+			        <div id="sidebar" class="group one-fourth">
+			            <div class="widget-first widget-last widget recent-posts">
+			                <h3>Latest news</h3>
+			                <div class="recent-post group">
+
+			                    <div class="hentry-post group">
+			                        <div class="thumb-img"><img width="55" height="55" src="images/blog/blog1-55x55.jpg" class="attachment-thumb_recentposts wp-post-image" alt="blog1" title="blog1" /></div>
+			                        <a href="article.html" title="Another great article of the blog" class="title">Another great article of the blog</a>
+			                        <p class="post-date">April 10, 2017</p>
+			                    </div>
+
+			                    <div class="hentry-post group">
+			                        <div class="thumb-img"><img width="55" height="55" src="images/blog/Fotolia_2885999_Subscription_XL-720x367-55x55.jpg" class="attachment-thumb_recentposts wp-post-image" alt="Fotolia_2885999_Subscription_XL-720x367" title="Fotolia_2885999_Subscription_XL-720x367" /></div>
+			                        <a href="article.html" title="Meet M&egrave;mento WordPress theme" class="title">Meet Wordpress</a>
+			                        <p class="post-date">April 10, 2017</p>
+			                    </div>
+
+			                    <div class="hentry-post group">
+			                        <div class="thumb-img"><img width="55" height="55" src="images/blog/Fotolia_26908_Subscription_XL-720x296-55x55.jpg" class="attachment-thumb_recentposts wp-post-image" alt="Fotolia_26908_Subscription_XL-720x296" title="Fotolia_26908_Subscription_XL-720x296" /></div>
+			                        <a href="article.html" title="A fresh WordPress theme for your site" class="title">A fresh WordPress</a>
+			                        <p class="post-date">April 10, 2017</p>
+			                    </div>
+
+			                </div>
+			            </div>
+			        </div>
+			        <!-- END LATEST NEWS -->
+			    </div>
+			</div>
+			<div class="inner home-portfolio home-services home-section group">
+			    <h2>Robofantic <span>Games</span></h2>
+			    <div class="hentry-post group first">
+			        <div class="thumb-img"><a href="game.html" title="Maya Shop" class="title"><img width="208" height="168" src="C:\Users\Alex\Desktop\WEbsite\images\es_icon_accelerate.png" class="attachment-thumb_filterable wp-post-image" alt="Game" title="Game" /></a></div>
+			        <h3><a href="game.html" title="Maya Shop" class="title">Acceleration!</a></h3>
+			        <p>Hold down the accelerate button to go up and let go to go down </p>
+			        <p><a href="game.html" class="btn btn-retro-package-3 btn-more-link"><i class="icon-list" style="font-size: 14px;"></i>   Play Here</a></p>
+			    </div>
+			    <div class="hentry-post group">
+			        <div class="thumb-img"><a href="project.html" title="Sheeva WP Theme" class="title"><img width="208" height="168" src="images/portfolio/work2-208x168.jpg" class="attachment-thumb_filterable wp-post-image" alt="work2" title="work2" /></a></div>
+			        <h3><a href="project.html" title="Sheeva WP Theme" class="title">Swords</a></h3>
+			        <p></p>
+			        <p><a href="project.html" class="btn btn-retro-package-3 btn-more-link"><i class="icon-list" style="font-size: 14px;"></i>  Play Here</a></p>
+			    </div>
+			    <div class="hentry-post group">
+			        <div class="thumb-img"><a href="project.html" title="Xmas Icons" class="title"><img width="208" height="168" src="images/portfolio/x5-700x295-208x168.jpg" class="attachment-thumb_filterable wp-post-image" alt="x5-700x295" title="x5-700x295" /></a></div>
+			        <h3><a href="project.html" title="Xmas Icons" class="title">Xmas</a></h3>
+			        <p></p>
+			        <p><a href="project.html" class="btn btn-retro-package-3 btn-more-link"><i class="icon-list" style="font-size: 14px;"></i>   Play Here</a></p>
+			    </div>
+			    <div class="hentry-post group last">
+			        <div class="thumb-img"><a href="project.html" title="Creative Brand" class="title"><img width="208" height="168" src="images/portfolio/0014-208x168.jpg" class="attachment-thumb_filterable wp-post-image" alt="0014" title="0014" /></a></div>
+			        <h3><a href="project.html" title="Creative Brand" class="title">Brand It</a></h3>
+			        <p></p>
+			        <p><a href="project.html" class="btn btn-retro-package-3 btn-more-link"><i class="icon-list" style="font-size: 14px;"></i>   Play Here</a></p>
+			    </div>
+			    </ul>
+			</div>
+			</div>
+			<div class="clear"></div>
+			</div>
+			<!-- END WRAPPER -->
+
+			<div id="footer" class="sidebar-right">
+            <div class="group inner footer_row_1 footer_cols_3">
+
+                <div class="widget-first widget recent-posts">
+                    <h3>From our blog</h3>
+                    <div class="recent-post group">
+
+                        <div class="hentry-post group">
+                            <p class="post-date"><span class="day">2</span><span class="month">May</span><span class="year">2012</span></p>
+                            <h3><a href="article.html" title="Another great article of the blog" class="title">Another great article of the blog</a></h3>
+                            <p class="meta">
+                            	<span class="comments"><a href="article.html#comments" title="Comment on Another great article of the blog">2 comments</a></span><br />
+                            	<a href="article.html" class="read-more"></a>
+                            </p>
+                        </div>
+
+                        <div class="hentry-post group">
+                            <p class="post-date"><span class="day">30</span><span class="month">April</span><span class="year">2012</span></p>
+                            <h3><a href="article.html" title="Fall in Love with M&egrave;mento theme!" class="title">Fall in Love with Mèmento theme!</a></h3>
+                            <p class="meta">
+                            	<span class="comments"><a href="article.html#respond" title="Comment on Fall in Love with M&egrave;mento theme!">No comments</a></span><br />
+                            	<a href="article.html" class="read-more"></a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="widget widget_nav_menu">
+                    <h3>Custom menu</h3>
+                    <div class="menu-footer-menu-container">
+                        <ul id="menu-footer-menu" class="menu">
+                            <li class="columns2"><a href="#">Blog</a></li>
+                            <li class="columns2"><a href="#">Pages</a></li>
+                            <li class="columns2"><a href="contact.html">Contact</a></li>
+                            <li class="columns2"><a href="testimonials.html">Testimonials</a></li>
+                            <li class="columns2"><a href="#">Web design blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="quick-contact-widget widget two-third last">
+                    <div class="widget-last widget quick-contact">
+                        <h3>Quick Contact</h3>
+                        <form id="contact-form-example" class="contact-form" method="post" action="sendmail.php" enctype="multipart/form-data">
+                            <div class="usermessagea"></div>
+                            <fieldset>
+                                <ul>
+                                    <li class="text-field">
+                                        <label for="name-example">
+                                        <span class="label">Name</span>
+                                        </label>
+                                        <div class="input-prepend"><span class="add-on"><i class="icon-user"></i></span><input type="text" name="name" id="name-example" class="required" value="" /></div>
+                                        <div class="msg-error"></div>
+                                    </li>
+                                    <li class="text-field">
+                                        <label for="email-example">
+                                        <span class="label">Email</span>
+                                        </label>
+                                        <div class="input-prepend"><span class="add-on"><i class="icon-envelope"></i></span><input type="text" name="email" id="email-example" class="required email-validate" value="" /></div>
+                                        <div class="msg-error"></div>
+                                    </li>
+                                    <li class="textarea-field">
+                                        <label for="message-example">
+                                        <span class="label">Message</span>
+                                        </label>
+                                        <div class="input-prepend"><span class="add-on"><i class="icon-pencil"></i></span><textarea name="message" id="message-example" rows="8" cols="30" class="required"></textarea></div>
+                                        <div class="msg-error"></div>
+                                    </li>
+                                    <li class="submit-button">
+                                        <input type="text" name="yiw_bot" id="yiw_bot" />
+                                        <input type="hidden" name="action" value="sendemail" id="action" />
+                                        <input type="hidden" name="yiw_referer" value="#" />
+                                        <input type="hidden" name="id_form" value="footer" />
+                                        <input type="submit" name="yiw_sendemail" value="send message" class="sendmail alignright" />
+                                    </li>
+                                </ul>
+                            </fieldset>
+                        </form>
+                        <script type="text/javascript">
+                            var messages_form_footer = {
+                            	name: "Insert your name",
+                            	email: "Insert your email",
+                            	message: "Insert your message"
+                            };
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- START FOOTER -->
+        <div id="copyright" class="group">
+            <div class="inner group">
+                <div class="left">
+                    <p>
+                    	Copyright <a href="#"><strong>Robofantic</strong></a> 2017
+                    </p>
+                </div>
+                <div class="right">
+                    <a href="#" class="socials facebook" style="font-size:30px;" title="Facebook">F</a>
+                    <a href="#" class="socials twitter" style="font-size:30px;" title="Twitter">L</a>
+                    <a href="#" class="socials skype" style="font-size:30px;" title="Skype">H</a>
+                    <a href="#" class="socials google" style="font-size:30px;" title="Google">G</a>
+                    <a href="#" class="socials linkedin" style="font-size:30px;" title="Linkedin">I</a>
+                    <a href="#" class="socials rss" style="font-size:30px;" title="Rss">R</a>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="js/jquery.custom.js"></script>
+        <script type="text/javascript" src="js/contact.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36516261-21']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+    </body>
 </html>
